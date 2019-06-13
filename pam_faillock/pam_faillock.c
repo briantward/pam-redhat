@@ -106,15 +106,7 @@ args_parse(pam_handle_t *pamh, int argc, const char **argv,
 	opts->root_unlock_time = MAX_TIME_INTERVAL+1;
 
 	for (i = 0; i < argc; ++i) {
-		if (strncmp(argv[i], "conf=", 5) == 0) {
-			if (argv[i][5] != '/') {
-				pam_syslog(pamh, LOG_ERR,
-					"Conf file is not absolute path (%s); keeping default", argv[i]);
-			} else {
-				opts->conf = argv[i]+5;
-			}
-		}
-		else if (strcmp(argv[i], "preauth") == 0) {
+		if (strcmp(argv[i], "preauth") == 0) {
 			opts->action = FAILLOCK_ACTION_PREAUTH;
 		}
 		else if (strcmp(argv[i], "authfail") == 0) {

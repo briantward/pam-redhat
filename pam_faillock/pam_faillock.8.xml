@@ -21,15 +21,9 @@
       <arg choice="req">
         preauth|authfail|authsucc
       </arg>
-      <arg choice="opt">
-        conf=<replaceable>/path/to/faillock.conf</replaceable>
-      </arg>
     </cmdsynopsis>
     <cmdsynopsis id="pam_faillock-cmdsynopsisacct">
       <command>account ... pam_faillock.so</command>
-      <arg choice="opt">
-        conf=<replaceable>/path/to/faillock.conf</replaceable>
-      </arg>
     </cmdsynopsis>
   </refsynopsisdiv>
 
