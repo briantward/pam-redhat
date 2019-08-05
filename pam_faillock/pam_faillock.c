@@ -96,6 +96,7 @@ args_parse(pam_handle_t *pamh, int argc, const char **argv,
 		int flags, struct options *opts)
 {
 	int i;
+    int rv;
 	memset(opts, 0, sizeof(*opts));
 
 	opts->dir = FAILLOCK_DEFAULT_TALLYDIR;
@@ -120,7 +121,7 @@ args_parse(pam_handle_t *pamh, int argc, const char **argv,
 		}
 	}
 
-	if ((rv=read_config_file(pamh, opts, opts->conf,error)) != PAM_SUCCESS) {
+	if ((rv=read_config_file(pamh, opts, opts->conf)) != PAM_SUCCESS) {
 		pam_syslog(pamh, LOG_ERR,
 					"Error opening conf file. Using defaults.");
 	}
@@ -212,7 +213,7 @@ read_config_file(pam_handle_t *pamh, struct options *opts, const char *cfgfile)
 	return PAM_SUCCESS;
 }
 
-static void set_conf_opt(pam_handle_t *pamh, struct options *opts, const char *name, const char *value)
+void set_conf_opt(pam_handle_t *pamh, struct options *opts, const char *name, const char *value)
 {
 	if (strncmp(name, "dir", 3) == 0) {
 		if (value[0] != '/') {
