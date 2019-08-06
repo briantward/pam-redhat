@@ -271,12 +271,12 @@ session  required       pam_selinux.so open
   <refsect1 id="faillock.conf-files">
     <title>FILES</title>
     <variablelist>
-      <varlistentry>$
-        <term><filename>/etc/security/faillock.conf</filename></term>$
-        <listitem>$
-          <para>the config file for custom options</para>$
-        </listitem>$
-      </varlistentry>$
+      <varlistentry>
+        <term><filename>/etc/security/faillock.conf</filename></term>
+        <listitem>
+          <para>the config file for custom options</para>
+        </listitem>
+      </varlistentry>
     </variablelist>
   </refsect1>
 
