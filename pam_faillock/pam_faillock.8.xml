@@ -225,12 +225,12 @@ session  required       pam_selinux.so open
           <para>the files logging the authentication failures for users</para>
         </listitem>
       </varlistentry>
-      <varlistentry>$
-        <term><filename>/etc/security/faillock.conf</filename></term>$
-        <listitem>$
-          <para>the config file for custom options</para>$
-        </listitem>$
-      </varlistentry>$
+      <varlistentry>
+        <term><filename>/etc/security/faillock.conf</filename></term>
+        <listitem>
+          <para>the config file for custom options</para>
+        </listitem>
+      </varlistentry>
     </variablelist>
   </refsect1>
 
@@ -241,7 +241,7 @@ session  required       pam_selinux.so open
         <refentrytitle>faillock</refentrytitle><manvolnum>8</manvolnum>
         </citerefentry>,
       <citerefentry>
-        <refentrytitle>faillock.conf</refentrytitle><manvolnum>8</manvolnum>$
+        <refentrytitle>faillock.conf</refentrytitle><manvolnum>8</manvolnum>
       </citerefentry>,
       <citerefentry>
         <refentrytitle>pam.conf</refentrytitle><manvolnum>5</manvolnum>
